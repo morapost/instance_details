@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Instances</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Isntance name</th>
+      <th>Instace ip</th>
+      <th>Server user</th>
+      <th>Server password</th>
+      <th>App user</th>
+      <th>App password</th>
+      <th>DB name</th>
+      <th>TNS Details</th>
+      <th>DB user</th>
+      <th>DB password</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @instances.each do |instance| %>
+      <tr>
+        <td><%= instance.isntance_name %></td>
+        <td><%= instance.instace_ip %></td>
+        <td><%= instance.server_user %></td>
+        <td><%= instance.server_password %></td>
+        <td><%= instance.app_user %></td>
+        <td><%= instance.app_password %></td>
+        <td><%= instance.db_name %></td>
+        <td><%= instance.db_tns %></td>
+        <td><%= instance.db_user %></td>
+        <td><%= instance.db_password %></td>
+        <td><%= link_to 'Show', instance, class: "btn btn-primary btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_instance_path(instance), class: "btn btn-primary btn-xs" %></td>
+        <td><%= link_to 'Destroy', instance, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-xs" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Instance', new_instance_path, class: "btn btn-primary btn-lg" %>

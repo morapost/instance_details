@@ -1,0 +1,37 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar-default {
+    background-color: #15D9A5;
+    border-color: #0B7B5D;
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+$height-footer: 60px;
+
+html {
+  min-height: 100%;
+  position: relative;
+  body {
+    margin-bottom: $height-footer;
+  }
+  #footer {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    height: $height-footer;
+    color: white;
+    background-color: #090909;
+    .footer-block {
+      margin: 20px 0;
+    }
+  }
+}

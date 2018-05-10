@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isntance name:</strong>
+  <%= @instance.isntance_name %>
+</p>
+
+<p>
+  <strong>Instace ip:</strong>
+  <%= @instance.instace_ip %>
+</p>
+
+<p>
+  <strong>Server user:</strong>
+  <%= @instance.server_user %>
+</p>
+
+<p>
+  <strong>Server password:</strong>
+  <%= @instance.server_password %>
+</p>
+
+<p>
+  <strong>App user:</strong>
+  <%= @instance.app_user %>
+</p>
+
+<p>
+  <strong>App password:</strong>
+  <%= @instance.app_password %>
+</p>
+
+<p>
+  <strong>Db name:</strong>
+  <%= @instance.db_name %>
+</p>
+
+<p>
+  <strong>Db tns:</strong>
+  <%= @instance.db_tns %>
+</p>
+
+<p>
+  <strong>Db user:</strong>
+  <%= @instance.db_user %>
+</p>
+
+<p>
+  <strong>Db password:</strong>
+  <%= @instance.db_password %>
+</p>
+
+<%= link_to 'Edit', edit_instance_path(@instance) %> |
+<%= link_to 'Back', instances_path %>

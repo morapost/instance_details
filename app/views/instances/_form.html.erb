@@ -1,0 +1,99 @@
+<%= form_for(instance) do |f| %>
+  <% if instance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(instance.errors.count, "error") %> prohibited this instance from being saved:</h2>
+
+      <ul>
+      <% instance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :isntance_name %>
+      <%= f.text_field :isntance_name, class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :instace_ip %>
+      <%= f.text_field :instace_ip, class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :server_user %>
+      <%= f.text_field :server_user,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :server_password %>
+      <%= f.text_field :server_password,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :web_server_ip %>
+      <%= f.text_field :web_server_ip,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :app_server_ip %>
+      <%= f.text_field :app_server_ip,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :scheduler_ip %>
+      <%= f.text_field :scheduler_ip,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :PS_HOME %>
+      <%= f.text_field :PS_HOME,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :PS_CFG_HOME %>
+      <%= f.text_field :PS_CFG_HOME,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :PS_APP_HOME %>
+      <%= f.text_field :PS_APP_HOME,class: "form-control input-sm" %>
+    </div>
+
+
+    <div class="form-group col-md-4">
+      <%= f.label :app_user %>
+      <%= f.text_field :app_user, class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :app_password %>
+      <%= f.text_field :app_password,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :db_name %>
+      <%= f.text_field :db_name,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :db_user %>
+      <%= f.text_field :db_user,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :db_password %>
+      <%= f.text_field :db_password,class: "form-control input-sm" %>
+    </div>
+
+    <div class="form-group col-md-4">
+      <%= f.label :db_tns %>
+      <%= f.text_area :db_tns,class: "form-control" %>
+    </div>
+
+    <div class="col-md-10 form-group">
+      <%= submit_tag "Create Instance", class: "btn btn-primary" %>
+    </div>
+  </div> 
+<% end %>
