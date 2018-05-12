@@ -1,4 +1,4 @@
-<p class="alert alert-success"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <h1>Instances</h1>
 
@@ -12,9 +12,6 @@
       <th>App user</th>
       <th>App password</th>
       <th>DB name</th>
-      <th>TNS Details</th>
-      <th>DB user</th>
-      <th>DB password</th>
       <th colspan="3">Actions</th>
     </tr>
   </thead>
@@ -29,9 +26,6 @@
         <td><%= instance.app_user %></td>
         <td><%= instance.app_password %></td>
         <td><%= instance.db_name %></td>
-        <td><%= instance.db_tns %></td>
-        <td><%= instance.db_user %></td>
-        <td><%= instance.db_password %></td>
         <td><%= link_to 'Show', instance, class: "btn btn-primary btn-xs" %></td>
         <td><%= link_to 'Edit', edit_instance_path(instance), class: "btn btn-primary btn-xs" %></td>
         <td><%= link_to 'Destroy', instance, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-xs" %></td>

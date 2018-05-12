@@ -4,7 +4,12 @@ class InstancesController < ApplicationController
   # GET /instances
   # GET /instances.json
   def index
-    @instances = Instance.all
+    @instances = Instance.contains_ESA_instance_name
+    
+  end
+
+  def index_hcm
+    @instances_hcm = Instance.contains_HCM_instance_name
   end
 
   # GET /instances/1

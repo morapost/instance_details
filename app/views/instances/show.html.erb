@@ -1,54 +1,113 @@
-<p class="alert alert-success"><%= notice %></p>
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><strong>Server Details</strong></h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <strong>Instace ip:</strong>
+          <%= @instance.isntance_name %>
+        </p>
+        
+        <p>
+          <strong>Instace ip:</strong>
+          <%= @instance.instace_ip %>
+        </p>
 
-<p>
-  <strong>Isntance name:</strong>
-  <%= @instance.isntance_name %>
-</p>
+        <p>
+          <strong>Server user:</strong>
+          <%= @instance.server_user %>
+        </p>
 
-<p>
-  <strong>Instace ip:</strong>
-  <%= @instance.instace_ip %>
-</p>
+        <p>
+          <strong>Server password:</strong>
+          <%= @instance.server_password %>
+        </p>
 
-<p>
-  <strong>Server user:</strong>
-  <%= @instance.server_user %>
-</p>
+        <p>
+          <strong>Web Server IP:</strong>
+          <%= @instance.web_server_ip %>
+        </p>
 
-<p>
-  <strong>Server password:</strong>
-  <%= @instance.server_password %>
-</p>
+        <p>
+          <strong>App Server IP:</strong>
+          <%= @instance.app_server_ip %>
+        </p>
 
-<p>
-  <strong>App user:</strong>
-  <%= @instance.app_user %>
-</p>
+        <p>
+          <strong>Scheduler IP:</strong>
+          <%= @instance.scheduler_ip %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><strong>DB Details</strong></h3>
+      </div>
+      <div class="panel-body">
+        <p>
+        <strong>Db name:</strong>
+        <%= @instance.db_name %>
+        </p>
 
-<p>
-  <strong>App password:</strong>
-  <%= @instance.app_password %>
-</p>
+        <p>
+        <strong>Db user:</strong>
+        <%= @instance.db_user %>
+        </p>
 
-<p>
-  <strong>Db name:</strong>
-  <%= @instance.db_name %>
-</p>
+        <p>
+        <strong>Db password:</strong>
+        <%= @instance.db_password %>
+        </p>
 
-<p>
-  <strong>Db tns:</strong>
-  <%= @instance.db_tns %>
-</p>
+        <strong>TNS Details:</strong>
+        <textarea rows="3">  
+          <%= @instance.db_tns %>
+        </textarea>
 
-<p>
-  <strong>Db user:</strong>
-  <%= @instance.db_user %>
-</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><strong>Misc..</strong></h3>
+      </div>
+      <div class="panel-body">
+        <p>
+        <strong>PS Home:</strong>
+        <%= @instance.PS_HOME %>
+        </p>
 
-<p>
-  <strong>Db password:</strong>
-  <%= @instance.db_password %>
-</p>
+        <p>
+        <strong>Configuration Home:</strong>
+        <%= @instance.PS_CFG_HOME %>
+        </p>
+
+        <p>
+        <strong>APP Home:</strong>
+        <%= @instance.PS_APP_HOME %>
+        </p>
+
+        <p>
+        <strong>Application User:</strong>
+        <%= @instance.app_user %>
+        </p>
+
+        <p>
+        <strong>Application password:</strong>
+        <%= @instance.app_password %>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <%= link_to 'Edit', edit_instance_path(@instance) %> |
 <%= link_to 'Back', instances_path %>
