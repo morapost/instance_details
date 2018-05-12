@@ -31,39 +31,36 @@ class InstancesController < ApplicationController
   def create
     @instance = Instance.new(instance_params)
 
-    respond_to do |format|
       if @instance.save
-        format.html { redirect_to @instance, notice: 'Instance was successfully created.' }
-        format.json { render :show, status: :created, location: @instance }
+        flash[:success] = "Instance Created Successfully!" 
+        redirect_to @instance 
+        
       else
-        format.html { render :new }
-        format.json { render json: @instance.errors, status: :unprocessable_entity }
+        render :new 
       end
-    end
+    
   end
 
   # PATCH/PUT /instances/1
   # PATCH/PUT /instances/1.json
   def update
-    respond_to do |format|
+
       if @instance.update(instance_params)
-        format.html { redirect_to @instance }
-        format.json { render :show, status: :ok, location: @instance ,notice: 'Instance was successfully created.'}
+         flash[:success] = "Instance Updated Successfully!" 
+         redirect_to @instance 
       else
-        format.html { render :edit }
-        format.json { render json: @instance.errors, status: :unprocessable_entity }
+       render :edit 
       end
-    end
+    
   end
 
   # DELETE /instances/1
   # DELETE /instances/1.json
   def destroy
     @instance.destroy
-    respond_to do |format|
-      format.html { redirect_to instances_url, notice: 'Instance was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    
+      flash[:success] = "Instance Created Successfully!" 
+      redirect_to instances_url 
   end
 
   private

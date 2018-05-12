@@ -36,10 +36,11 @@ $height-footer: 60px;
 html {
   min-height: 100%;
   position: relative;
+  
   body {
     margin-bottom: $height-footer;
   }
-  #footer {
+  .footer {
     bottom: 0;
     width: 100%;
     position: absolute;

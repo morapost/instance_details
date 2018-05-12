@@ -11,9 +11,9 @@
   <body>
   <%= render 'layouts/navbar'%>
   <div class="container">
-  	<% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-	<% end %>
+  	<% flash.each do |key, value| %>
+    	<div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
     <%= yield %>
   </div> 
   <%= render 'layouts/footer' %>
