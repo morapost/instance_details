@@ -1,7 +1,7 @@
 
 <div class="row">
   <div class="col-md-4">
-    <div class="panel panel-default">
+    <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-title"><strong>Server Details</strong></h3>
       </div>
@@ -44,7 +44,7 @@
     </div>
   </div>
   <div class="col-md-4">
-    <div class="panel panel-default">
+    <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-title"><strong>DB Details</strong></h3>
       </div>
@@ -65,7 +65,7 @@
         </p>
 
         <strong>TNS Details:</strong>
-        <textarea rows="3">  
+        <textarea rows="2">  
           <%= @instance.db_tns %>
         </textarea>
 
@@ -73,7 +73,7 @@
     </div>
   </div>
   <div class="col-md-4">
-    <div class="panel panel-default">
+    <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-title"><strong>Misc..</strong></h3>
       </div>
@@ -109,5 +109,5 @@
 </div>
 
 
-<%= link_to 'Edit', edit_instance_path(@instance) %> |
-<%= link_to 'Back', instances_path %>
+<%= link_to 'Edit', edit_instance_path(@instance), class: "btn btn-primary btn-sm" %> |
+<%= link_to 'Back', instances_path, class: "btn btn-primary btn-sm" %>
