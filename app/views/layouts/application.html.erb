@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>InstaceDetails</title>
+    <title>Compass PSADMIN Instace Details</title>
     <%= csrf_meta_tags %>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compass PSADMIN Instance Details">
+    <meta name="author" content="Bhushan - working for cognizant">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Exo+2:500" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <%= render 'layouts/navbar'%>
-  <div class="container">
-  	<% flash.each do |key, value| %>
-    	<div class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
-    <%= yield %>
-  </div> 
-  <%= render 'layouts/footer' %>
+	  <div id="wrap">
+		  <%= render 'layouts/navbar'%>
+		  <div class="container">
+		  	<% flash.each do |key, value| %>
+		    	<div class="alert alert-<%= key %>"><%= value %></div>
+		    <% end %>
+		    <%= yield %>
+		  </div> 
+		</div>  
+	<%= render 'layouts/footer' %>
+		
   </body>
 </html>

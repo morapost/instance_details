@@ -1,27 +1,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$height-footer: 60px;
-
-html {
+html,
+body {
+  height: 100%;
+  font-family: 'Exo 2', sans-serif;
+  /* The html and body elements cannot have any padding or margin. */
+}
+   
+#wrap {
   min-height: 100%;
-  position: relative;
-  
-  body {
-    margin-bottom: $height-footer;
-    font-family: 'Exo 2', sans-serif;
-  }
-  .footer {
-    bottom: 0;
-    width: 100%;
-    position: absolute;
-    height: $height-footer;
-    color: white;
-    background-color: #090909;
-    .footer-block {
-      margin: 20px 0;
-    }
-  }
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+  background-color: #f7fafb;
+}   
+
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #ededed;
+    height: 60px;
+    /*position: relative;*/
+    color: #484848;
+    text-align: center;
+}
+
+.footer .copyright {
+    opacity: .5;
+    line-height: 1.7;
 }
 
 #error_explanation {
@@ -39,7 +47,15 @@ html {
   }
 }
 
+td {
+	text-align: center;
+}
 
+textarea {
+	margin: 0px;
+    width: 317px;
+    height: 100px;
+}
 
 th, .navbar-default, .btn-primary {
     background-color: #15D9A5;
@@ -50,10 +66,19 @@ th, .navbar-default, .btn-primary {
 
 .navbar-default .navbar-nav > li > a {
 	color: white;
+	font-size: large;
 }
 
 .navbar-default .navbar-brand {
     color: white;
+}
+
+.pagination {
+  .previous_page { background:#15D9A5; color:white }
+  .previous_page.disabled { background: white; color: #777 }
+  
+  .next_page { background: #15D9A5; color: white; text-align: right; }
+  .next_page.disabled { background: white; color: #777 }
 }
 
 

@@ -3,13 +3,14 @@ class InstancesController < ApplicationController
 
   # GET /instances
   # GET /instances.json
+
   def index
-    @instances = Instance.contains_ESA_instance_name
+    @instances = Instance.contains_ESA_instance_name.paginate(:page => params[:page], :per_page => 5)
     
   end
 
   def index_hcm
-    @instances_hcm = Instance.contains_HCM_instance_name
+    @instances_hcm = Instance.contains_HCM_instance_name.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /instances/1
@@ -59,7 +60,7 @@ class InstancesController < ApplicationController
   def destroy
     @instance.destroy
     
-      flash[:success] = "Instance Created Successfully!" 
+      flash[:success] = "Instance Deleted Successfully!" 
       redirect_to instances_url 
   end
 
